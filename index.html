@@ -28,18 +28,7 @@
 </ons-splitter>
 
 <template id="scan.html">
-  <ons-page>
-    <ons-toolbar modifier="transparent">
-      <div class="left">
-        <ons-toolbar-button onclick="fn.open()">
-          <ons-icon icon="md-menu" style="color: #FFFFFF"></ons-icon>
-        </ons-toolbar-button>
-      </div>
-      <div class="center">
-      </div>
-    </ons-toolbar>
-    <p style="text-align: center; opacity: 0.6; padding-top: 20px;">
-      <video id="preview"></video>
+  <video id="preview"></video>
         <script type="text/javascript">
       let scanner = new Instascan.Scanner({ video: document.getElementById('preview') });
       scanner.addListener('scan', function (content) {
@@ -55,6 +44,17 @@
         console.error(e);
       });
     </script>
+  <ons-page>
+    <ons-toolbar modifier="transparent">
+      <div class="left">
+        <ons-toolbar-button onclick="fn.open()">
+          <ons-icon icon="md-menu" style="color: #FFFFFF"></ons-icon>
+        </ons-toolbar-button>
+      </div>
+      <div class="center">
+      </div>
+    </ons-toolbar>
+    <p style="text-align: center; opacity: 0.6; padding-top: 20px;">
     </p>
   </ons-page>
 </template>
