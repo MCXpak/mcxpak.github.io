@@ -36,7 +36,11 @@
         </ons-toolbar-button>
       </div>
       <div class="center">
-        <video id="preview"></video>
+      </div>
+    </ons-toolbar>
+    <p style="text-align: center; opacity: 0.6; padding-top: 20px;">
+    </p>
+    <video id="preview"></video>
     <script type="text/javascript">
       let scanner = new Instascan.Scanner({ video: document.getElementById('preview') });
       scanner.addListener('scan', function (content) {
@@ -52,10 +56,6 @@
         console.error(e);
       });
     </script>
-      </div>
-    </ons-toolbar>
-    <p style="text-align: center; opacity: 0.6; padding-top: 20px;">
-    </p>
   </ons-page>
 </template>
 
